@@ -1,14 +1,7 @@
-# Welcome to your CDK TypeScript project!
+# Amazon DynamoDB + DAX CDK Demo Project with table seeding
 
-This is a blank project for TypeScript development with CDK.
+This is an AWS CDK project that creates a simple Amazon DynamoDB table and DAX cluster. 
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+The template also includes a custom Lambda function that automatically seeds your table after creation with some sample data from a CSV function. You can edit the table schema or sample data as needed. 
 
-## Useful commands
-
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+While not yet, my plan is to eventually add some example code to demonstrate performance differences between using DynamoDB directly vs. taking advantage of the in-memory writethrough cache that DAX provides. 
